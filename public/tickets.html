@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tickets — Tickety</title>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section class="browse-head">
+      <span class="eyebrow">Issued Passes &amp; Reservations</span>
+      <h1 class="display-title">My Tickets</h1>
+    </section>
+
+    <div id="booked-banner" class="notice-banner" style="display: none; margin-bottom: 2rem;"></div>
+
+    <div class="results-summary" style="margin-bottom: 1.75rem;">
+      <span id="tickets-summary-label">Loading reservations...</span>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <label class="field-label" for="tickets-filter-cat">Category</label>
+        <select id="tickets-filter-cat" class="select" style="width: auto; min-width: 170px;">
+          <option value="all">All Categories</option>
+          <option value="cinema">Cinema</option>
+          <option value="concert">Concerts</option>
+          <option value="football">Football</option>
+          <option value="bus">Bus</option>
+          <option value="train">Train</option>
+          <option value="plane">Flights</option>
+        </select>
+      </div>
+    </div>
+
+    <section id="tickets-list" class="tickets-list"></section>
+  </main>
+
+  <div id="cancel-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="cancel-modal-title">
+    <div class="modal-dialog">
+      <div>
+        <span class="eyebrow">Reservation Amendment</span>
+        <h2 id="cancel-modal-title" class="section-title">Cancel Ticket</h2>
+      </div>
+      <div id="cancel-modal-body" class="form-stack"></div>
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; padding-top: 0.5rem;">
+        <button type="button" id="cancel-modal-close" class="btn btn-ghost">Keep Booking</button>
+        <button type="button" id="cancel-modal-confirm" class="btn btn-dark">Confirm Cancellation</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/shell.js"></script>
+  <script src="/js/tickets.js"></script>
+</body>
+</html>

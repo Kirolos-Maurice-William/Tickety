@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
+    { "source": "/(cinema|concert|football|bus|train|plane|browse)", "destination": "/browse.html" },
+    { "source": "/(event|ticket_detail)", "destination": "/event.html" },
+    { "source": "/(tickets|PurchasedTickets)", "destination": "/tickets.html" },
+    { "source": "/(account|login|register|profile)", "destination": "/account.html" },
+    { "source": "/(contact|contactUs)", "destination": "/contact.html" }
+  ]
+}

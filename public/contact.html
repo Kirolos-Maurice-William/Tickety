@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Office Inquiry — Tickety</title>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container two-col-page">
+    <section>
+      <span class="eyebrow">Customer &amp; Group Desk</span>
+      <h1 class="display-title" style="margin-bottom: 1.25rem;">Box Office Inquiry</h1>
+      <p class="lead" style="font-size: 1.05rem; margin-bottom: 2rem;">
+        For group allocations, accessible seating arrangements or intercity charter inquiries, send a note to the central desk.
+      </p>
+
+      <div class="detail-facts" style="grid-template-columns: 1fr 1fr;">
+        <div>
+          <div class="fact-label">Dispatch Hours</div>
+          <div class="fact-value">Sunday to Thursday, 10:00 &ndash; 18:00 EET</div>
+        </div>
+        <div>
+          <div class="fact-label">Central Desk</div>
+          <div class="fact-value">Cairo Opera Grounds, Zamalek</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <form id="contact-form" class="form-stack" style="max-width: 500px;">
+        <div class="field">
+          <label class="field-label" for="contact-name">Full Name</label>
+          <input id="contact-name" class="input" type="text" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="contact-email">Email Address</label>
+          <input id="contact-email" class="input" type="email" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="contact-message">Inquiry</label>
+          <textarea id="contact-message" class="textarea" required placeholder="Include booking reference if applicable..."></textarea>
+        </div>
+        <div id="contact-feedback" class="notice-banner" style="display: none;"></div>
+        <button type="submit" id="contact-submit" class="btn btn-primary" style="align-self: flex-start;">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/shell.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

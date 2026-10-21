@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogue — Tickety</title>
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <section class="browse-head">
+      <span id="browse-eyebrow" class="eyebrow">Catalogue</span>
+      <h1 id="browse-title" class="display-title">All Events &amp; Departures</h1>
+    </section>
+
+    <section aria-label="Filters">
+      <div class="filter-strip">
+        <div class="field">
+          <label class="field-label" for="filter-q">Keyword</label>
+          <input id="filter-q" class="input" type="search" placeholder="Title, venue or city..." />
+        </div>
+
+        <div id="field-city-wrap" class="field">
+          <label class="field-label" for="filter-city">City</label>
+          <select id="filter-city" class="select">
+            <option value="">All Cities</option>
+          </select>
+        </div>
+
+        <div id="field-origin-wrap" class="field" style="display: none;">
+          <label class="field-label" for="filter-origin">Origin</label>
+          <select id="filter-origin" class="select">
+            <option value="">All Origins</option>
+          </select>
+        </div>
+
+        <div id="field-destination-wrap" class="field" style="display: none;">
+          <label class="field-label" for="filter-destination">Destination</label>
+          <select id="filter-destination" class="select">
+            <option value="">All Destinations</option>
+          </select>
+        </div>
+
+        <div id="field-price-wrap" class="field">
+          <label class="field-label" for="filter-max-price">Max Base Price (EGP)</label>
+          <input id="filter-max-price" class="input" type="number" min="0" step="50" placeholder="No limit" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="filter-availability">Availability</label>
+          <select id="filter-availability" class="select">
+            <option value="">All</option>
+            <option value="available">Available Only</option>
+            <option value="soldout">Sold Out</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="filter-sort">Sort By</label>
+          <select id="filter-sort" class="select">
+            <option value="date-asc">Soonest First</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="title-asc">Title: A to Z</option>
+          </select>
+        </div>
+
+        <button id="filter-reset-btn" type="button" class="btn btn-ghost">Reset</button>
+      </div>
+    </section>
+
+    <div class="results-summary">
+      <span id="results-count">Loading catalogue...</span>
+    </div>
+
+    <section style="padding-bottom: 4rem;">
+      <div id="browse-grid" class="events-grid"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/shell.js"></script>
+  <script src="/js/browse.js"></script>
+</body>
+</html>

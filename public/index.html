@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tickety — Box Office &amp; Intercity Ticketing</title>
+  <meta name="description" content="Reserve cinema seats, concert halls, league fixtures, coaches, rail and flights across Egypt." />
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Box Office &amp; Regional Transit</span>
+          <h1 class="display-title">Cinema halls, concert stages, stadium stands and intercity departures.</h1>
+          <p class="lead">
+            Select exact seats or travel classes with transparent pricing in Egyptian Pounds and instant digital tickets.
+          </p>
+          <form id="hero-search-form" class="hero-search-bar">
+            <input
+              id="hero-search-q"
+              class="input"
+              type="search"
+              placeholder="Search film, orchestra, match or destination..."
+              aria-label="Search query"
+            />
+            <select id="hero-search-cat" class="select" aria-label="Category">
+              <option value="">All Categories</option>
+              <option value="cinema">Cinema</option>
+              <option value="concert">Concerts</option>
+              <option value="football">Football</option>
+              <option value="bus">Bus</option>
+              <option value="train">Train</option>
+              <option value="plane">Flights</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Find Tickets</button>
+          </form>
+        </div>
+
+        <div id="hero-feature">
+          <div class="hero-feature-media">
+            <img src="/images/events/concert-cairo-symphony.webp" alt="Cairo Symphony Orchestra" />
+          </div>
+          <div class="hero-feature-caption">
+            <span>Featured &middot; Cairo Opera House, Main Hall</span>
+            <a href="/event?id=concert-cairo-symphony" class="section-link">Reserve seats</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Browse by Discipline</h2>
+          <a href="/browse" class="section-link">View complete catalogue</a>
+        </div>
+        <div class="category-index-grid">
+          <a href="/cinema" class="category-index-item">
+            <span class="eyebrow">01</span>
+            <span class="category-index-name">Cinema</span>
+            <span class="category-index-desc">Interactive hall seat selection across four screening formats.</span>
+          </a>
+          <a href="/concert" class="category-index-item">
+            <span class="eyebrow">02</span>
+            <span class="category-index-name">Concerts</span>
+            <span class="category-index-desc">Orchestral programmes, chamber ensembles and open-air stages.</span>
+          </a>
+          <a href="/football" class="category-index-item">
+            <span class="eyebrow">03</span>
+            <span class="category-index-name">Football</span>
+            <span class="category-index-desc">Domestic league fixtures, cup ties and international matches.</span>
+          </a>
+          <a href="/bus" class="category-index-item">
+            <span class="eyebrow">04</span>
+            <span class="category-index-name">Bus</span>
+            <span class="category-index-desc">Direct highway and coastal coaches in Economy, Comfort and Business.</span>
+          </a>
+          <a href="/train" class="category-index-item">
+            <span class="eyebrow">05</span>
+            <span class="category-index-name">Train</span>
+            <span class="category-index-desc">Nile valley daytime expresses and overnight sleeper cabins.</span>
+          </a>
+          <a href="/plane" class="category-index-item">
+            <span class="eyebrow">06</span>
+            <span class="category-index-name">Flights</span>
+            <span class="category-index-desc">Domestic Red Sea routes and non-stop regional departures.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Cultural &amp; Sporting Calendar</span>
+            <h2 class="section-title">Screenings, Performances &amp; Fixtures</h2>
+          </div>
+          <a href="/cinema" class="section-link">Explore venue events</a>
+        </div>
+        <div id="home-venue-grid" class="events-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Intercity &amp; Regional</span>
+            <h2 class="section-title">Scheduled Coach, Rail &amp; Air Departures</h2>
+          </div>
+          <a href="/train" class="section-link">Explore routes</a>
+        </div>
+        <div id="home-transit-grid" class="events-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/shell.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
